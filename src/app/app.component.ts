@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { environment } from './environments/environment';
 
 class Toggle {
   code: string;
@@ -20,10 +21,13 @@ export class AppComponent implements OnInit{
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+
+    if (environment.webService) {
     const toggle = this.http.get('http://localhost:8081/feature-toggle/v1/' + this.toggleName);
     toggle.subscribe((data: Toggle) => {
       console.log('Response:' + JSON.stringify(data));
       this.ratingEnabled = (this.stateON === data.state.valueOf());
     });
+  }
   }
 }
