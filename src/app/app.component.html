@@ -1,6 +1,6 @@
 <div class="header">
   <h1>Product A</h1>
-  <div id="starsRating" *ngIf="ratingEnabled" class="rate" data-rate-value="4.7"></div>
+  <div class="rate" data-rate-value="4.7" [hidden]="!ratingEnabled"></div>
   <h3 *ngIf="ratingEnabled">4.7</h3>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in tristique felis, sed tempus ipsum.</p>
 </div>

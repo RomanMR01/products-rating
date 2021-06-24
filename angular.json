@@ -55,6 +55,20 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "web": {
+                "fileReplacements": [
+                  {
+                    "replace": "src/environments/environment.ts",
+                    "with": "src/environments/environment.web.ts"
+                  }]
+            },
+            "optimizely": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.optimizely.ts"
+                }]
             }
           }
         },
@@ -66,6 +80,12 @@
           "configurations": {
             "production": {
               "browserTarget": "products-rating:build:production"
+            },
+            "web": {
+              "browserTarget": "products-rating:build:web"
+            },
+            "optimizely": {
+              "browserTarget": "products-rating:build:optimizely"
             }
           }
         },

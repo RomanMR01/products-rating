@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   webService: false,
-  optimizely: false
+  optimizely: true
 };
 
 /*
