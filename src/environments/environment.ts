@@ -2,10 +2,11 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import {RestToggleService} from '../app/rest-toggle.service';
+
 export const environment = {
   production: false,
-  webService: false,
-  optimizely: false
+  toggleService: RestToggleService
 };
 
 /*
